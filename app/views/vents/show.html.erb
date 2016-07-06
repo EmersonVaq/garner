@@ -1,0 +1,19 @@
+
+
+<p>
+  <strong>Title:</strong>
+  <%= @vent.title %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @vent.user %>
+</p>
+
+<p>
+  <strong>Vent text:</strong>
+  <%= @vent.vent_text %>
+</p>
+
+<%= link_to 'Edit', edit_vent_path(@vent) %> |
+<%= link_to 'Back', vents_path %>
