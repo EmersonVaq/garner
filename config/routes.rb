@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get 'pages/contact_us'
 
+
   resources :vents
   devise_for :users
   

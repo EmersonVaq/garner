@@ -16,7 +16,7 @@
     <% @vents.each do |vent| %>
       <tr>
         <td><%= vent.title %></td>
-        <td><%= vent.user %></td>
+        <td><%= vent.user_id %></td>
         <td><%= vent.vent_text %></td>
         <td><%= link_to 'Show', vent %></td>
         <td><%= link_to 'Edit', edit_vent_path(vent) %></td>
