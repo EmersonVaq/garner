@@ -25,6 +25,7 @@ class VentsController < ApplicationController
   # POST /vents.json
   def create
     @vent = Vent.new(vent_params)
+    @vent.user_id = current_user.id
 
     respond_to do |format|
       if @vent.save
