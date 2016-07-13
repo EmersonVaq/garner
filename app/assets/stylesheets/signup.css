@@ -1,63 +1,14 @@
-header {
-  padding: 20px 0;
-  background-color: #00e6e6;
-}
-header .row {
-  display: flex;
-  align-items: center;
-}
-header h1 {
-    font-size: 50px;
-    font-family: "Arial Black", Gadget, sans-serif; 
-    color: white;
-    margin-left: 30px;
-  }
-header a {
-  text-decoration: none;
-}
-header nav {
-  display: flex;
-  justify-content: flex-end;
-}
-header p {
-  padding: 0 20px;
-  margin: 2px;
-  text-align: center;
-}
+
 .signup{
     border: solid 2px #e1eaea;
     background-color: #f2f2f2;
     text-align: center;
-    width: 250px;
-    margin: 20px;
+    width: 350px;
     border-radius: 8px;
     align-items: center;
-    padding: 30px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
-  }
-  .btn.btn-primary {
-  border-radius: 2px;
-  border: 0px;
-  color: #00e6e6;
-  text-shadow: none;
-  background-color: #ffffff;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  margin-left: 10px;
-  justify-content: flex-end;
+    padding: 30px
 }
-
-.btn.btn-primary:hover {
-  color: #ffffff;
-  background-color: #fbd1d5;
-}
-
-.btn-secondary {
-  background-color: #00e6e6;
-  color: #e1eaea;
-  margin: 0 0 30px;
-}
-

@@ -5,9 +5,34 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  
+      <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 
+  <header class="container">
+    <div class="row">
+      <h1 class="col-sm-4">
+        Garner
+      </h1>
+
+
+      <nav class="col-sm-8 text-right">
+        <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>.
+          <%= link_to "Edit profile", edit_user_registration_path, :class => "btn btn-primary", :role => 'button' %> 
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "btn btn-primary", :role => 'button'  %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path, :class => "btn btn-primary", :role => 'button'  %> 
+          <%= link_to "Login", new_user_session_path, :class => "btn btn-primary", :role => 'button'  %>
+        <% end %>
+      </nav>
+    </div>
+  </header>
 
 <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
@@ -15,18 +40,18 @@
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
-<p class="navbar-text pull-right">
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+<p class="navbar-text">
+<!--<% if user_signed_in? %>
+  Logged in as  <strong> <%= current_user.email %></strong>.
+  <%= link_to "Edit profile", edit_user_registration_path, :class => 'navbar-link' %>
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 <% else %>
-  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
 <ul class="nav">
   <li class="active"><a href="/vents">Vents</a></li>
-</ul>
+</ul>-->
 <%= yield %>
 
 </body>
