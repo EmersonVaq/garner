@@ -14,21 +14,22 @@
  *= require_self
  */
 
-
- header {
+#logo{
+  margin-left: 20px;
+}
+header {
   padding: 20px 0;
   background-color: #00e6e6;
 }
 header .row {
   display: flex;
   align-items: center;
-  size: cover;
 }
+
 header h1 {
     font-size: 50px;
     font-family: "Arial Black", Gadget, sans-serif; 
     color: white;
-
 }
 header nav {
   display: flex;
@@ -52,6 +53,3 @@ header nav {
 }
 
 
-header nav{
-    float: right;
-}

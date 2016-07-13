@@ -1,31 +1,38 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>-->
+<link rel="stylesheet" type="text/css" href="vent_index.css">
+<div class="col-sm-3"></div>
+<div class="col-sm-6">
 
 <h1>Listing Vents</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
+<div class="container">
+  <table>
+    <tbody>
+      <% @vents.each do |vent| %>
+        <tr class="row_1">
+          <td><strong><%= vent.title %></strong></td>
+          <td><%= vent.user_id %></td>        
+        </tr>
+        <tr>
+          <td><%= vent.vent_text %></td>
+        </tr>
+        <tr>
+          <td><%= link_to 'Show', vent %></td>
+          <td><%= link_to 'Edit', edit_vent_path(vent) %></td>
+          <td><%= link_to 'Destroy', vent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br>
+</div>
+
+<div class="col-sm-3">
+  <%= link_to 'New Vent', new_vent_path, :class => "btn btn-primary_newvent", :role => 'button'  %>
+</div>
+
+<!--      <th>Title</th>
       <th>User</th>
       <th>Vent text</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @vents.each do |vent| %>
-      <tr>
-        <td><%= vent.title %></td>
-        <td><%= vent.user %></td>
-        <td><%= vent.vent_text %></td>
-        <td><%= link_to 'Show', vent %></td>
-        <td><%= link_to 'Edit', edit_vent_path(vent) %></td>
-        <td><%= link_to 'Destroy', vent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Vent', new_vent_path %>
+      <th colspan="3"></th>-->

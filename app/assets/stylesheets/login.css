@@ -16,7 +16,7 @@
   align-items: center;
   background-image: url("http://cache2.asset-cache.net/xd/187825046.jpg?v=1&c=IWSAsset&k=2&d=62CA815BFB1CE480DDA131BDCD039B222B6A5D266AEA58DB45EFE3956983F882C0A4153C60158C89");
   background-size: cover;
-  height: 750px;
+  height: 730px;
 }
 
 
@@ -36,4 +36,5 @@
   color: white;
   line-height: 1.5;
   text-indent: 10px;
+  font-size: medium;
 }
