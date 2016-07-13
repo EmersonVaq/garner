@@ -24,6 +24,7 @@ header {
 header .row {
   display: flex;
   align-items: center;
+  size :cover;
 }
 
 header h1 {
@@ -32,6 +33,7 @@ header h1 {
     color: white;
 }
 header nav {
+  position: fixed;
   display: flex;
   justify-content: flex-end;
 }
