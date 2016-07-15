@@ -21,6 +21,7 @@
         <td><%= link_to 'Show', vent %></td>
         <td><%= link_to 'Edit', edit_vent_path(vent) %></td>
         <td><%= link_to 'Destroy', vent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Comment', vent_path(vent) %></td>
       </tr>
     <% end %>
   </tbody>

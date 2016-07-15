@@ -18,7 +18,7 @@ class VentsControllerTest < ActionController::TestCase
 
   test "should create vent" do
     assert_difference('Vent.count') do
-      post :create, vent: { title: @vent.title, user: @vent.user, vent_text: @vent.vent_text }
+      post :create, vent: { title: @vent.title, user_id: @vent.user_id, vent_text: @vent.vent_text }
     end
 
     assert_redirected_to vent_path(assigns(:vent))
@@ -35,7 +35,7 @@ class VentsControllerTest < ActionController::TestCase
   end
 
   test "should update vent" do
-    patch :update, id: @vent, vent: { title: @vent.title, user: @vent.user, vent_text: @vent.vent_text }
+    patch :update, id: @vent, vent: { title: @vent.title, user_id: @vent.user_id, vent_text: @vent.vent_text }
     assert_redirected_to vent_path(assigns(:vent))
   end
 

@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
+  vent_id: 
   user_id: 
-  vent_text: MyText
+  comment_text: MyText
 
 two:
-  title: MyString
+  vent_id: 
   user_id: 
-  vent_text: MyText
+  comment_text: MyText

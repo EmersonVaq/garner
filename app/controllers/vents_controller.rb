@@ -69,6 +69,6 @@ class VentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vent_params
-      params.require(:vent).permit(:title, :user, :vent_text)
+      params.require(:vent).permit(:title, :user_id, :vent_text)
     end
 end

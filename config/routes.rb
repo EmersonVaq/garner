@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :vents
+  resources :comments
   get 'pages/home'
 
   get 'pages/about'
@@ -7,7 +9,6 @@ Rails.application.routes.draw do
   get 'pages/contact_us'
 
 
-  resources :vents
   devise_for :users
   
   devise_scope :user do
