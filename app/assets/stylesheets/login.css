@@ -1,7 +1,7 @@
 
 .login{
     border: solid 2px #e1eaea;
-    background-color: #f2f2f2;
+     background-color: #f2f2f2;
     text-align: center;
     width: 350px;
     border-radius: 8px;
@@ -38,3 +38,40 @@
   text-indent: 10px;
   font-size: medium;
 }
+h2 {
+  text-align: center;
+}
+.section-padding {
+  padding: 120px 0; 
+  
+}
+.intro span.icon {
+  font-size: 40px;
+  color: #FF5274;
+  font-weight: bold; }
+
+.intro-icon {
+  display: inline-block;
+  vertical-align: top;
+  padding: 6px 0 0 0;
+  margin-right: 20px;
+  width: 40px; }
+
+.intro-content {
+  display: inline-block;
+  width: 200px; }
+  
+  section.intro, section.features-extra, section.sign-up {
+  background: #fff; }
+
+  .features .feature-icon {
+    display: inline-block;
+    vertical-align: top;
+    padding: 6px 0 0 0;
+    margin-right: 20px;
+    width: 40px; }
+.may{
+   width: 270px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 16px;
+  }
