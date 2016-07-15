@@ -10,16 +10,22 @@
     <tbody>
       <% @vents.each do |vent| %>
         <tr class="row_1">
-          <td><strong><%= vent.title %></strong></td>
-          <td><%= vent.user_id %></td>        
+          <td colspan="3"><strong><%= vent.title %></strong> &nbsp&nbsp<i>by</i> <%= vent.user_id %></td>
+       
         </tr>
         <tr>
-          <td><%= vent.vent_text %></td>
+          <td><p><%= vent.vent_text %></p></td>
+        </tr>
+        <tr class="row_2">
+          <td colspan "3"><%= link_to 'Show', vent %>
+          <%= link_to 'Edit', edit_vent_path(vent) %>
+          <%= link_to 'Destroy', vent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
         <tr>
-          <td><%= link_to 'Show', vent %></td>
-          <td><%= link_to 'Edit', edit_vent_path(vent) %></td>
-          <td><%= link_to 'Destroy', vent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td colspan="3"></td>
+        </tr>
+        <tr>
+          <td colspan="3"></td>
         </tr>
       <% end %>
     </tbody>

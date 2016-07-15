@@ -53,5 +53,31 @@ header nav {
   color: #ffffff;
   background-color: #fbd1d5;
 }
-
-
+.main-navigation {
+  align-items: center;
+  display: block;
+  color: white;
+  font-size: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-navigation a {
+  color: white;
+  text-decoration: none;
+}
+.main-navigation a:hover {
+  color: #9999ff;
+  background-color: #00e6e6;
+  text-decoration: none;
+  border-radius: 2px;
+  border: 5px;
+  text-shadow: none;
+  height: 25px;
+  width: 90px;
+  text-align: center;
+  margin: 20px;
+}
+.margin_0 {
+  margin-right: 0;
+  margin-left: 0;
+}

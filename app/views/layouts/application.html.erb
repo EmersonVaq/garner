@@ -15,7 +15,7 @@
 <body>
 
   <header class="">
-    <div class="row">
+    <div class="row margin_0">
       <div class="col-sm-1" id="logo">
         <center><%= image_tag("logo.png", height: '70', width: '70') %></center>
       </div>
@@ -24,24 +24,34 @@
       </h1>
 
 
-      <nav class="col-sm-7 text-right">
+      <nav class="col-sm-7 text-right margin_0">
         <% if user_signed_in? %>
           <!--Logged in as <strong><%= current_user.email %></strong>.-->
           <%= link_to "Edit profile", edit_user_registration_path, :class => "btn btn-primary", :role => 'button' %> 
           <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "btn btn-primary", :role => 'button'  %>
+          
         <% else %>
           <%= link_to "Sign up", new_user_registration_path, :class => "btn btn-primary", :role => 'button'  %> 
           <%= link_to "Login", new_user_session_path, :class => "btn btn-primary", :role => 'button'  %>
         <% end %>
       </nav>
     </div>
+
+    <div class="row margin_0" >
+      <% if user_signed_in? %>
+        <nav class="main-navigation">
+						<h3><a id="main" href="https://garner-cmulero.c9users.io">Home</a> | <a id="main" href="">My Vents</a> | <a id="main" href="https://garner-cmulero.c9users.io/pages/about">About</a> | <a id="main" href="https://garner-cmulero.c9users.io/pages/contact_us">Contact us</a></h3></center>
+				</nav>
+			<% end %>	
+		</div>
+
   </header>
 
-<% if notice %>
+<!--<% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
 <% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
+  <p class="alert alert-danger"><%= alert %></p>-->
 <% end %>
 
 <%= yield %>
