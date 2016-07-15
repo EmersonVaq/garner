@@ -5,6 +5,33 @@
 
 <h1>Listing Vents</h1>
 
+<<<<<<< HEAD
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>User</th>
+      <th>Vent text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vents.each do |vent| %>
+      <tr>
+        <td><%= vent.title %></td>
+        <td><%= vent.user_id %></td>
+        <td><%= vent.vent_text %></td>
+        <td><%= link_to 'Show', vent %></td>
+        <td><%= link_to 'Edit', edit_vent_path(vent) %></td>
+        <td><%= link_to 'Destroy', vent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Comment', vent_path(vent) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+=======
 <div class="container">
   <table>
     <tbody>
@@ -31,6 +58,7 @@
     </tbody>
   </table>
 </div>
+>>>>>>> 917d915b25e543bb84130a5fdce3092ffc649238
 <br>
 </div>
 

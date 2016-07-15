@@ -15,5 +15,23 @@
   <%= @vent.vent_text %>
 </p>
 
+<p><b>Comments</b></p>
+<% @vent.comments.each do |comment| %>
+<p><%= comment.comment_text %></p>
+<% end %>
+
+
+<%= form_for(@vent.comments.build) do |f| %>
+  <div><%= f.hidden_field :user_id, :value => current_user.id%></div>
+  <div><%= f.hidden_field :vent_id, :value => @vent.id%></div>
+  <div class="field">
+    <%= f.label :comment_text %><br>
+    <%= f.text_area :comment_text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
 <%= link_to 'Edit', edit_vent_path(@vent) %> |
 <%= link_to 'Back', vents_path %>
