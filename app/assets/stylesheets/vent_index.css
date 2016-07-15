@@ -16,11 +16,19 @@
   background-color: #fbd1d5;
 }
 .row_1 {
-    font-size: 18px;
-    color:#ffffff;
-    background-color:#fbd1d5;
-    text-shadow: 2px 2px 4px #000000;
-    width: 400px;
-    height: 20px;
-    padding: 6px;
+    font-size: 30px;
+    color: black;
+    background: linear-gradient(to right, #00e6e6,rgb(153, 153, 255));
+    text-indent: 3px;
+    padding: 10px;
+
+}
+table {
+  empty-cells: show;
+  width: 500px;
+  margin: 15px;
+
+}
+row_2 {
+  border: 2px solid red;
 }
